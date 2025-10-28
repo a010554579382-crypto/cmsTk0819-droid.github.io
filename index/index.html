@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김효겸 | 자기소개</title>
+  <meta name="description" content="김효겸의 자기소개 페이지">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0f14;
+      --card: #12161d;
+      --text: #e8eef7;
+      --muted: #9fb0c0;
+      --primary: #4da3ff;
+      --accent: #7cf8d6;
+      --border: #1e2633;
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(124,248,214,0.08), transparent 60%),
+                  radial-gradient(1000px 700px at -10% 20%, rgba(77,163,255,0.10), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      font-family: "Pretendard", system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.6;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 920px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    header.hero {
+      background: linear-gradient(90deg,
+                  rgba(91,206,250,0.25) 0%,
+                  rgba(91,206,250,0.25) 20%,
+                  rgba(245,169,184,0.25) 20%,
+                  rgba(245,169,184,0.25) 40%,
+                  rgba(255,255,255,0.20) 40%,
+                  rgba(255,255,255,0.20) 60%,
+                  rgba(245,169,184,0.25) 60%,
+                  rgba(245,169,184,0.25) 80%,
+                  rgba(91,206,250,0.25) 80%,
+                  rgba(91,206,250,0.25) 100%),
+                  var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 96px 1fr auto;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(124,248,214,0.25), rgba(77,163,255,0.25));
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      color: var(--card);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .title-wrap h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      letter-spacing: 0.3px;
+    }
+
+    .title-wrap p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(124,248,214,0.1);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #0f141b;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      font-size: 16px;
+      color: var(--muted);
+      letter-spacing: 0.4px;
+    }
+
+    dl.profile {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 10px 16px;
+      margin: 0;
+    }
+
+    dl.profile dt {
+      color: var(--muted);
+    }
+
+    dl.profile dd {
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    .note {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 860px) {
+      header.hero { grid-template-columns: 72px 1fr; }
+      .badges { grid-column: 1 / -1; }
+      main { grid-template-columns: 1fr; }
+    }
+  </style>
+  <meta name="theme-color" content="#0c0f14">
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="avatar">EW</div>
+      <div class="title-wrap">
+        <h1>김효겸</h1>
+        <p>차은우 닮은 외모 | 비트코인 유튜버 (김찬호)</p>
+      </div>
+      <div class="badges">
+        <span class="badge">만 17세</span>
+        <span class="badge">키 184cm</span>
+        <span class="badge">몸무게 80kg</span>
+        <span class="badge">우파 지향</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2 class="section-title">소개</h2>
+        <p>
+          안녕하세요, 김효겸입니다. 차은우를 닮은 비주얼로 알려져 있으며,
+          암호화폐와 투자 콘텐츠를 다루는 비트코인 유튜버로 활동하고 있습니다.
+          현실적인 시각과 담백한 설명을 지향합니다. 자유시장과 책임을 중시하는 우파 성향을 가지고 있습니다.
+          또한 농구는 스테픈 커리만큼, 축구는 호날두 못지않은 실력을 자랑합니다.
+        </p>
+        <p class="note">여자친구: 신세경</p>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">프로필</h2>
+        <dl class="profile">
+          <dt>이름</dt>
+          <dd>김효겸</dd>
+          <dt>나이</dt>
+          <dd>17</dd>
+          <dt>키</dt>
+          <dd>184cm</dd>
+          <dt>몸무게</dt>
+          <dd>80kg</dd>
+          <dt>외모</dt>
+          <dd>차은우 닮음</dd>
+          <dt>직업</dt>
+          <dd>비트코인 유튜버 (김찬호)</dd>
+          <dt>여자친구</dt>
+          <dd>신세경</dd>
+          <dt>성향</dt>
+          <dd>우파 지향</dd>
+        </dl>
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="year"></span> HyoGyeom Kim. All rights reserved.
+    </footer>
+  </div>
+
+  <section class="card" style="margin: 0 auto; max-width: 920px; width: 100%;">
+    <h2 class="section-title">사진</h2>
+    <figure class="photo" style="margin:0;">
+      <img id="profilePhoto" src="assets/photo-placeholder.jpg" alt="사진" width="320" height="420" style="border-radius: 12px; border: 1px solid var(--border); background:#fff; object-fit: cover;" />
+      <figcaption class="note">이미지 URL이나 파일 경로를 주시면 이 위치에 교체해 드립니다.</figcaption>
+    </figure>
+  </section>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
