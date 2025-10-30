@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>제품 소개</title>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      /* 밝은 하늘 그라데이션과 빛 번짐, 구름 장식 */
+      background: radial-gradient(ellipse at 80% 10%, #fff9e3 0%, #ffe7ae 12%, transparent 26%),
+                  linear-gradient(180deg, #d4f0ff 0%, #b1daef 33%, #e6f7ff 100%);
+      min-height: 100vh;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      /* 부드러운 구름 장식 */
+      background:
+        radial-gradient(ellipse 34% 8% at 25% 17%, #fff 0%, #fff9e8 60%, transparent 100%),
+        radial-gradient(ellipse 30% 8% at 70% 13%, #fff 0%, #e8f7fff2 65%, transparent 100%),
+        radial-gradient(ellipse 12% 6% at 60% 27%, #fff 20%, #f8fff6cc 100%, transparent 100%),
+        /* 먼 하늘의 구름 */
+        radial-gradient(ellipse 28% 6% at 35% 28%, #e7faff 44%, transparent 100%),
+        radial-gradient(ellipse 16% 4% at 81% 31%, #ecf7fe 28%, transparent 100%);
+      opacity: 0.46;
+      pointer-events: none;
+    }
+    header { background: none; }
+    .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+    .section-row {
+      display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;
+    }
+    .section-content { flex: 1 1 330px; min-width: 240px; }
+    .photo-box {
+      flex: 0 0 250px;
+      min-width: 170px;
+      max-width: 320px;
+      height: 180px;
+      background: #ddefff linear-gradient(135deg,#fafcff 60%,#d9e9f2 100%);
+      border-radius: 11px;
+      box-shadow: 0 3px 30px #bcd7ffd1 inset,0 1px 10px #7eb7e039 inset;
+      margin-top: 6px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .photo-box img {
+      max-width: 98%; max-height: 98%; object-fit: cover; border-radius: 8px;
+      filter: drop-shadow(0 2px 13px #6eb0db33);
+    }
+    section { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 32px; padding: 32px 28px 28px 28px; }
+    h1, h2 { color: #27408b; }
+    h2 { margin-top: 0; }
+    ul { margin: 0; padding-left: 18px; }
+    .footer { background: #222; color: #ccc; text-align: center; padding: 18px 0; margin-top: 40px; border-radius: 0 0 10px 10px;}
+    /* 구성요소 섹션만 별도 넓은 레이아웃 적용 */
+    .component-photo-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+    .component-photo-box {
+      width: 100%;
+      max-width: 780px;
+      height: 170px;
+      background: #fffbe3 linear-gradient(90deg,#f7faff 60%,#e7efff 100%);
+      border-radius: 13px;
+      box-shadow: 0 3px 30px #e6eedaa6,0 1px 10px #7eb7e039 inset;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+      position: relative;
+      border: 2px solid #e3e3d5;
+    }
+    .component-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 12px;
+      filter: drop-shadow(0 2px 13px #e8d48d55);
+      background: #fff;
+    }
+    @media (max-width: 700px) {
+      .section-row { flex-direction: column; gap:8px; }
+      .photo-box { align-self: center; margin-bottom: 7px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display:flex; flex-direction:column; align-items:center; background: #e0f3fb linear-gradient(120deg,#b3e2ff 0%,#b3e2ff 15%,#2986a9 100%); padding: 36px 0 40px 0; border-bottom: 6px solid #85c3f9; box-shadow:0 2px 24px #4aa4e988 inset, 0 13px 19px -11px #73b3e0;">
+      <div style="
+        background: repeating-linear-gradient( 90deg, #488ac7 0 22px, #6ad1ff 25px 26px, #488ac7 26px 48px), #368fcf linear-gradient(120deg, #61e8fcbb 0%, #478cd4 140%);
+        border: 3.5px solid #e9ecef;
+        box-shadow:0 0 23px #b6f4fff5, 0 0 34px #5bc1e880 inset, 0 7px 17px -13px #fff, 0 0 160px #ffe;
+        border-radius: 13px;
+        width: 500px; max-width:92vw; height:120px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; overflow:hidden;">
+        <span style="position:absolute; top:10px; left:24px; font-size:28px; color:#e3f5ff; opacity:0.45;">◼︎ ◼︎ ◼︎ ◼︎</span>
+        <span style="position:absolute; bottom:5px; right:24px; font-size:23px; color:#e3f5ff; opacity:0.33;">◼︎ ◼︎ ◼︎ ◼︎</span>
+        <span style="font-size:2.25em; font-weight:900; color:#e9f8ff; letter-spacing:0.17em; font-family:Arial,'Noto Sans KR',sans-serif; text-shadow:0 2px 19px #2788b1,0 1px 0 #2270a4,0 6px 31px #fff, 1px -2px 35px #fff;">
+          태양광 자동 추적기
+        </span>
+        <span style="position:absolute; bottom:19px; left:60px; width:80%; height:20px; background: linear-gradient(to bottom,#fffde7 14%,transparent 100%); opacity:0.3;"></span>
+      </div>
+      <div style="margin-top:17px; font-size: 1.12em; color:#276b8a;text-shadow:0 2px 10px #e0fbff; font-weight:700;">혁신적인 태양광 자동 추적 시스템</div>
+    </div>
+  </header>
+  <div class="container">
+    <section>
+      <div class="section-row">
+        <div class="section-content">
+          <h2>작동 원리</h2>
+          <p>조도센서에서 측정된 빛의 세기를 계산하여 빛의 세기가 가장 강한 방향으로 태양광 패널이 향할 수 있도록 서브 모터를 이용해 태양광 패널을 움직입니다.</p>
+          <p>ex) 디스플레이 모듈과 네오픽셀 패널을 통해 수치를 확인할 수 있습니다.</p>
+        </div>
+        <div class="photo-box">
+          <img src="태양광.jpeg" alt="실제 태양광 패널">
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="section-row">
+        <div class="section-content">
+          <h2>구성 요소</h2>
+          <ul>
+            <li>나노 328p 호환보드</li>
+            <li>나노 I/O확장 프로토 쉴드</li>
+            <li>조도센서</li>
+            <li>태양광 패널</li>
+            <li>서브모터</li>
+            <li>OLED 디스플레이 모듈</li>
+            <li>네오픽셀 일자형 패널</li>
+          </ul>
+        </div>
+      </div>
+      <div class="component-photo-row">
+        <div class="component-photo-box">
+          <img src="구성요소.jpeg" alt="구성 요소 대표 이미지">
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="section-row">
+        <div class="section-content">
+          <h2>장점 및 특징</h2>
+          <p style="margin-top:20px; line-height:1.7;">
+            태양열 키트는 조도센서를 이용해 일사량을 감지하고, 패널이 태양 방향을 자동 추적하도록 솔리 트리거 메커니즘을 활용해 효율을 높입니다.<br>
+            구조적으로는 단축축 혹은 이축형으로 설계되어 고정형 대비 더 많은 태양광을 확보하며, 움직이는 구동부가 포함되어 자동으로 각도 조정을 실행합니다.<br>
+            센서 + 제어기 + 모터/액추에이터로 구성되어 있으며, 조도센서로 빛의 강도를 측정해 패널을 움직이도록 설계되어 있습니다.<br>
+            이러한 키트는 설치면적이 제한된 장소에서 출력 증가 효과가 있습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>수업 참여 느낌점</h2>
+      <div style="display: flex; gap:30px; flex-wrap:wrap; margin-top:20px;">
+        <div style="flex:1 1 290px; min-width:260px; background:#f6fbff; border-radius:10px; box-shadow:0 1px 8px #bddbef33 inset; padding:24px 20px 30px 20px; display:flex; flex-direction:column; align-items: flex-start; border: 2px solid #b6d9f7;">
+          <div style="font-weight: 700; color:#2577b3; font-size:1.18em; margin-bottom:13px;">1803 김효겸</div>
+          <div style="background: #fff; border-radius:5px; min-height:74px; width:100%; box-shadow:0 0 0 1.5px #cde7ff inset; font-size:1em; color:#333; padding:12px 11px;">첨음 배우는 코딩이여서 어려울거 같고 못할거 같다는 생각이 들었지만 선생님이 설명을 잘해주셨고 친구들과 협력하여 잘 끝마칠수있었다.</div>
+        </div>
+        <div style="flex:1 1 290px; min-width:260px; background:#f6fbff; border-radius:10px; box-shadow:0 1px 8px #bddbef33 inset; padding:24px 20px 30px 20px; display:flex; flex-direction:column; align-items: flex-start; border: 2px solid #b6d9f7;">
+          <div style="font-weight: 700; color:#2577b3; font-size:1.18em; margin-bottom:13px;">1820 황혜정</div>
+          <div style="background: #fff; border-radius:5px; min-height:74px; width:100%; box-shadow:0 0 0 1.5px #cde7ff inset; font-size:1em; color:#333; padding:12px 11px;">태양광이나 풍력 같은 걸 배우니까 생각보다 재밌었다.  환경을 지키기 위해 태양광을 많이 설치해야한다고 느꼈다.</div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="footer">
+    &copy; 2025 회사명. 모든 권리 보유. | 문의: contact@company.com
+  </div>
+</body>
+</html>
